@@ -29,6 +29,6 @@ app.post('/coins', (req, res) => {
 
     const { Rollno } = req.body//extracting rollno  from request
     const data = DATA.find(c => c.rollno === Rollno)//finding infoormation about this roll no in our data 
-    res.send(`here is your ${data.coins} IITK-coin`);//sending coins back to browser
+    res.send(`{"coins": ${data.coins} }`);//sending coins back to browser
 
 })
